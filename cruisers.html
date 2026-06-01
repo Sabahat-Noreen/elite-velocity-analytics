@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruisers Series</title>
+    <style>
+        /* INTERNAL CSS */
+
+        /* 1. Reset & Base Styles */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        /* 2. Navigation */
+        nav {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* 3. Hero Section UPDATED FOR VIDEO */
+        .page-header {
+            position: relative;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 120px 20px; /* Increased padding for better visibility */
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .header-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.5; /* Keeps the classic dark feel */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2; /* Keeps text above video */
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .page-header p {
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        /* 4. Bike Showcase Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .bike-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .bike-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .bike-image {
+            flex: 1;
+        }
+
+        .bike-image img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #d4af37;
+        }
+
+        .bike-info {
+            flex: 1;
+        }
+
+        .bike-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d4af37;
+            display: inline-block;
+        }
+
+        .specs {
+            margin-top: 20px;
+            background: #1a1a1a;
+            color: #d4af37;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* 5. Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .bike-section, .bike-section.reverse {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sport.html">Sport Bikes</a>
+        <a href="cruisers.html" style="color:#d4af37;">Cruisers</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="electric.html">Electric</a>
+        <a href="vintage.html">Vintage</a>
+    </nav>
+
+    <header class="page-header">
+        <video autoplay muted loop playsinline class="header-video">
+            <source src="videoo3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="header-content">
+            <h1>Top 3 Cruiser Bikes</h1>
+            <p>Thundering heritage in every mile.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="bike-section">
+            <div class="bike-image">
+                <img src="Triumph Rocket 3 Storm R.jpg" alt="Triumph Rocket 3 Storm R">
+            </div>
+            <div class="bike-info">
+                <h2>Triumph Rocket 3 Storm R</h2>
+                <p>The ultimate muscle roadster. With the world's largest production motorcycle engine, it offers a tidal wave of torque that effortlessly pins you back.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 2,458cc Inline-3<br>
+                    <strong>Power/Torque:</strong> 180 hp / 166 lb-ft<br>
+                    <strong>Weight:</strong> 699 lbs
+                </div>
+            </div>
+        </section>
+
+        <section class="bike-section reverse">
+            <div class="bike-image">
+                <img src="Harley-Davidson Sportster S.jpg" alt="Harley-Davidson Sportster S">
+            </div>
+            <div class="bike-info">
+                <h2>Harley-Davidson Sportster S</h2>
+                <p>A modern evolution of an American icon, featuring a high-revving liquid-cooled heart and a low, aggressive profile that commands the street.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 1,252cc V-Twin<br>
+                    <strong>Power/Torque:</strong> 121 hp / 93 lb-ft<br>
+                    <strong>Weight:</strong> 502 lbs
+                </div>
+            </div>
+        </section>
+
+        <section class="bike-section">
+            <div class="bike-image">
+                <img src="Ducati Diavel V4.jpg" alt="Ducati Diavel V4">
+            </div>
+            <div class="bike-info">
+                <h2>Ducati Diavel V4</h2>
+                <p>A "techno-cruiser" that defies physics, blending the muscular stance of a cruiser with the agile soul and explosive power of a naked sportbike.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 1,158cc V-4<br>
+                    <strong>Power/Torque:</strong> 168 hp / 93 lb-ft<br>
+                    <strong>Weight:</strong> 505 lbs
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Moto | Premium Cruiser Collection</p>
+    </footer>
+
+</body>
+</html>

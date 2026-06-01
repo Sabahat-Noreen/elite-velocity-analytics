@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Series</title>
+    <style>
+        /* INTERNAL CSS */
+
+        /* 1. Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        /* 2. Navigation */
+        nav {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* 3. Hero Section UPDATED FOR VIDEO */
+        .page-header {
+            position: relative;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 120px 20px; /* Increased padding for better visibility */
+            overflow: hidden;
+        }
+
+
+        .header-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.5; /* Darker overlay for better text contrast */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2; /* Ensures text stays above video */
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        .page-header p {
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+        }
+
+        /* 4. Bike Showcase Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .bike-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .bike-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .bike-image {
+            flex: 1;
+        }
+
+        .bike-image img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #d4af37;
+        }
+
+        .bike-info {
+            flex: 1;
+        }
+
+        .bike-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d4af37;
+            display: inline-block;
+        }
+
+        .specs {
+            margin-top: 20px;
+            background: #1a1a1a;
+            color: #d4af37;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* 5. Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .bike-section, .bike-section.reverse {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sport.html">Sport Bikes</a>
+        <a href="cruisers.html">Cruisers</a>
+        <a href="adventure.html" style="color:#d4af37;">Adventure</a>
+        <a href="electric.html">Electric</a>
+        <a href="vintage.html">Vintage</a>
+    </nav>
+
+    <header class="page-header">
+        <video autoplay muted loop playsinline class="header-video">
+            <source src="video5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="header-content">
+            <h1>Top 3 Adventure Bikes</h1>
+            <p>Master of every terrain, king of every road.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="bike-section">
+            <div class="bike-image">
+                <img src="BMW R 1300 GS.jpg" alt="BMW R 1300 GS">
+            </div>
+            <div class="bike-info">
+                <h2>BMW R 1300 GS</h2>
+                <p>The undisputed king of the world tourers. Its iconic boxer engine and rugged frame make it the "Swiss Army Knife" of motorcycles, ready for any continent.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 1,300cc Boxer Twin<br>
+                    <strong>Category:</strong> Heavyweight<br>
+                    <strong>Weight:</strong> 523 lbs
+                </div>
+            </div>
+        </section>
+
+        <section class="bike-section reverse">
+            <div class="bike-image">
+                <img src="Ducati Multistrada V4 Rally.jpg" alt="Ducati Multistrada V4 Rally">
+            </div>
+            <div class="bike-info">
+                <h2>Ducati Multistrada V4 Rally</h2>
+                <p>A high-speed private jet for the dirt. It blends exotic Italian performance with long-range comfort and advanced radar safety technology.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 1,158cc V-4<br>
+                    <strong>Category:</strong> Heavyweight<br>
+                    <strong>Weight:</strong> 573 lbs
+                </div>
+            </div>
+        </section>
+
+        <section class="bike-section">
+            <div class="bike-image">
+                <img src="Honda Africa Twin.jpg" alt="Honda Africa Twin">
+            </div>
+            <div class="bike-info">
+                <h2>Honda Africa Twin</h2>
+                <p>Named after the toughest race on earth, this machine is a true desert-ready explorer that balances rugged durability with daily rideability.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 1,084cc Parallel-Twin<br>
+                    <strong>Category:</strong> Heavyweight<br>
+                    <strong>Weight:</strong> 505 lbs
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Moto | Premium Adventure Collection</p>
+    </footer>
+
+</body>
+</html>

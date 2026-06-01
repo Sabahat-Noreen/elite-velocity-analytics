@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Moto | World's Best Bikes</title>
+    <style>
+        /* INTERNAL CSS */
+        
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Garamond', serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #c5a059;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #c5a059;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Hero Section Updated for Video */
+        .hero {
+            height: 70vh; /* Increased height slightly */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        /* Overlay to make text readable over video */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #c5a059;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            font-style: italic;
+        }
+
+        /* New Details Section */
+        .brand-story {
+            max-width: 900px;
+            margin: 60px auto 20px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .brand-story h2 {
+            color: #c5a059;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .brand-story p {
+            font-size: 1.1rem;
+            color: #d1d1d1;
+            margin-bottom: 15px;
+        }
+
+        /* Overview Grid */
+        .grid-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .bike-card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .bike-card:hover {
+            transform: translateY(-10px);
+            border-color: #c5a059;
+        }
+
+        .bike-card h2 {
+            color: #c5a059;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .bike-card p {
+            margin-bottom: 25px;
+            color: #bbb;
+        }
+
+        /* Elegant Button */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 1px solid #c5a059;
+            color: #c5a059;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c5a059;
+            color: #1a1a1a;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sport.html">Sport bikes</a>
+        <a href="cruisers.html">Cruisers</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="electric.html">Electric</a>
+        <a href="vintage.html">Vintage</a>
+    </nav>
+
+    <header class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>THE ELITE COLLECTIONS</h1>
+            <p>A curated overview of the world's most prestigious motorcycles, from record-breaking speedsters to timeless classics.</p>
+        </div>
+    </header>
+
+    <section class="brand-story">
+        <h2>Engineering Excellence</h2>
+        <p>At Elite Moto, we believe a motorcycle is more than just a machine; it's an extension of the soul. For over two decades, we have sourced only the finest examples of automotive art.</p>
+        <p>Whether you seek the adrenaline of a 200mph superbike or the nostalgic rumble of a vintage twin, our collection represents the pinnacle of craftsmanship and performance.</p>
+    </section>
+
+    <main class="grid-container">
+        <div class="bike-card">
+            <h2>Superbikes</h2>
+            <p>Aerodynamic perfection and raw power. Explore machines designed for the racetrack.</p>
+            <a href="superbikes.html" class="btn">Explore Speed</a>
+        </div>
+
+        <div class="bike-card">
+            <h2>Cruisers</h2>
+            <p>Iconic styling and low-end torque. Discover the kings of the open highway.</p>
+            <a href="cruisers.html" class="btn">Explore Style</a>
+        </div>
+
+        <div class="bike-card">
+            <h2>Adventure</h2>
+            <p>Built to conquer any terrain. See the bikes that don't need a road to travel.</p>
+            <a href="adventure.html" class="btn">Explore Freedom</a>
+        </div>
+
+        <div class="bike-card">
+            <h2>Electric</h2>
+            <p>The silent revolution. Experience high-torque performance without the emissions.</p>
+            <a href="electric.html" class="btn">Explore Future</a>
+        </div>
+
+        <div class="bike-card">
+            <h2>Vintage</h2>
+            <p>Mechanical masterpieces from the past. A tribute to the heritage of motorcycling.</p>
+            <a href="vintage.html" class="btn">Explore History</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Elite Moto International. Excellence in Two Wheels.
+    </footer>
+
+</body>
+</html>

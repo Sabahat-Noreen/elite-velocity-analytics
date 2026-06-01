@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Series</title>
+    <style>
+        /* INTERNAL CSS */
+
+        /* 1. Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        /* 2. Navigation */
+        nav {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* 3. Hero Section UPDATED FOR VIDEO */
+        .page-header {
+            position: relative;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 120px 20px; /* Increased padding for better visibility */
+            overflow: hidden;
+        }
+
+
+        .header-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.5; /* Muted for vintage feel and readability */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2; /* Keeps text above video */
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        .page-header p {
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+        }
+
+        /* 4. Bike Showcase Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .bike-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Reverse every second bike section for a professional look */
+        .bike-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .bike-image {
+            flex: 1;
+        }
+
+        .bike-image img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #d4af37;
+        }
+
+        .bike-info {
+            flex: 1;
+        }
+
+        .bike-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d4af37;
+            display: inline-block;
+        }
+
+        .specs {
+            margin-top: 20px;
+            background: #1a1a1a;
+            color: #d4af37;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* 5. Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Friendly Adjustments */
+        @media (max-width: 768px) {
+            .bike-section, .bike-section.reverse {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sport.html">Sport Bikes</a>
+        <a href="cruiserS.html">Cruisers</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="electric.html">Electric</a>
+        <a href="vintage.html" style="color:#d4af37;">Vintage</a>
+    </nav>
+
+    <header class="page-header">
+        <video autoplay muted loop playsinline class="header-video">
+            <source src="vedio7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="header-content">
+            <h1>Top 3 Vintage Bikes</h1>
+            <p>Every scratch tells a story; every mile is a memory.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="bike-section">
+            <div class="bike-image">
+                <img src="Triumph Bonneville T120.jpg" alt="Triumph Bonneville T120">
+            </div>
+            <div class="bike-info">
+                <h2>Triumph Bonneville T120</h2>
+                <p>The timeless gentleman of motorcycles. It maintains the classic 1959 silhouette while hiding modern fuel injection and traction control beneath its chrome.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 1,200cc Parallel-Twin  <br>
+                    <strong>Style:</strong>   Classic Roadster  <br>
+                    <strong>Weight:</strong>  520 lbs
+                </div>
+            </div>
+        </section>
+
+        <section class="bike-section reverse">
+            <div class="bike-image">
+                <img src="BMW R12 nineT.jpg" alt="BMW R12 nineT">
+            </div>
+            <div class="bike-info">
+                <h2>BMW R12 nineT</h2>
+                <p>A tribute to the heritage of the boxer engine, this bike is a canvas for customization that blends "Berlin-built" quality with a raw, mechanical soul.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 1,170cc Boxer Twin <br>
+                    <strong>Style:</strong> Heritage / Custom   <br>
+                    <strong>Weight:</strong> 485 lbs
+                </div>
+            </div>
+        </section>
+
+         <section class="bike-section">
+            <div class="bike-image">
+                <img src="Kawasaki Z900RS.jpg" alt="Kawasaki Z900RS">
+            </div>
+            <div class="bike-info">
+                <h2>Kawasaki Z900RS</h2>
+                <p>A love letter to the 1970s. Its teardrop tank and ribbed seat evoke deep nostalgia, but the modern suspension and brakes tell a much faster story.</p>
+                <div class="specs">
+                    <strong>Engine:</strong> 948cc Inline-4 <br>
+                    <strong>Style:</strong>  70s Superbike   <br>
+                    <strong>Weight:</strong> 474 lbs
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Moto | Premium Vintage Collection</p>
+    </footer>
+
+</body>
+</html>
